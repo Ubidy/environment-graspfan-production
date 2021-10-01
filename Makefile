@@ -7,7 +7,7 @@ build: clean
 	rm -rf requirements.lock
 	helm version
 	helm init
-	helm repo remove stable && helm repo add stable https://charts.helm.sh/stable
+	
 	# helm repo add stable https://charts.helm.sh/stable
 	# helm repo add jenkins-x http://chartmuseum.jenkins-x.io
 	# helm repo add storage.googleapis.com https://charts.helm.sh/stable
