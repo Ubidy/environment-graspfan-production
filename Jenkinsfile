@@ -7,6 +7,7 @@ pipeline {
   }
   environment {
     DEPLOY_NAMESPACE = "jx-live"
+    CHART_REPOSITORY = "https://charts.helm.sh/stable"
   }
   stages {
     stage('Validate Environment') {
