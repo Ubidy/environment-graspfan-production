@@ -6,7 +6,7 @@ OS := $(shell uname)
 build: clean
 	rm -rf requirements.lock
 	helm version
-	helm init
+	helm init --stable-repo-url https://charts.helm.sh/stable
 	helm repo add releases ${CHART_REPO}
 	helm repo add jenkins-x http://chartmuseum.jenkins-x.io
 	helm dependency build ${DIR}
