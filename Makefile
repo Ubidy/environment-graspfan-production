@@ -7,9 +7,9 @@ build: clean
 	rm -rf requirements.lock
 	helm version
 	helm init --client-only
-	helm repo add stable https://charts.helm.sh/stable
-	helm repo add jenkins-x http://chartmuseum.jenkins-x.io
-	helm repo add storage.googleapis.com https://charts.helm.sh/stable
+	# helm repo add stable https://charts.helm.sh/stable
+	# helm repo add jenkins-x http://chartmuseum.jenkins-x.io
+	# helm repo add storage.googleapis.com https://charts.helm.sh/stable
 	helm repo add releases ${CHART_REPO}
 	helm repo update ${CHART_REPO}
 	helm dependency build ${DIR}
