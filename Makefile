@@ -1,5 +1,5 @@
-# CHART_REPOSITORY := http://jenkins-x-chartmuseum:8080
-CHART_REPOSITORY := http://chartmuseum.jx.20.188.210.222.nip.io/
+CHART_REPOSITORY := http://jenkins-x-chartmuseum:8080
+# CHART_REPOSITORY := http://chartmuseum.jx.20.188.210.222.nip.io/
 DIR := "env"
 NAMESPACE := "jx-production"
 OS := $(shell uname)
