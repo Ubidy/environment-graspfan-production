@@ -1,6 +1,6 @@
 CHART_REPOSITORY := http://jenkins-x-chartmuseum:8080
 DIR := "env"
-NAMESPACE := "jx-production"
+NAMESPACE := "jx-live"
 OS := $(shell uname)
 
 build: clean
@@ -11,7 +11,6 @@ build: clean
 	# helm repo add jenkins-x http://chartmuseum.jenkins-x.io
 	# helm repo add storage.googleapis.com https://charts.helm.sh/stable
 	helm repo add releases ${CHART_REPOSITORY}
-	helm repo update ${CHART_REPOSITORY}
 	helm dependency build ${DIR}
 	helm lint ${DIR}
 
