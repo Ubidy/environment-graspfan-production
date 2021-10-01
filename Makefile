@@ -1,4 +1,4 @@
-CHART_REPO := http://jenkins-x-chartmuseum:8080
+CHART_REPOSITORY := http://jenkins-x-chartmuseum:8080
 DIR := "env"
 NAMESPACE := "jx-production"
 OS := $(shell uname)
@@ -6,7 +6,7 @@ OS := $(shell uname)
 build: clean
 	rm -rf requirements.lock
 	helm version
-	helm init --stable-repo-url https://charts.helm.sh/stable --client-only
+	helm init --client-only
 	helm repo add releases ${CHART_REPO}
 	helm repo add jenkins-x http://chartmuseum.jenkins-x.io
 	helm repo add storage.googleapis.com https://charts.helm.sh/stable
