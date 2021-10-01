@@ -13,6 +13,7 @@ pipeline {
       steps {
         container('maven') {
           dir('env') {
+            sh 'helm repo remove stable && helm repo add stable https://charts.helm.sh/stable'
             sh 'jx step helm build'
           }
         }
